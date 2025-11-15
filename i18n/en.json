@@ -1,0 +1,28 @@
+{
+  "teachers": {
+    "title": "Available Teachers",
+    "subtitle": "Choose the best teacher for your needs",
+    "filters": {
+      "searchPlaceholder": "Search a teacher...",
+      "subjectLabel": "Subject",
+      "priceRange": "Price range",
+      "rating": "Minimum rating"
+    },
+    "card": {
+      "price": "Price per hour",
+      "rating": "Rating",
+      "subjects": "Subjects",
+      "select": "Select this teacher",
+      "viewProfile": "View profile"
+    },
+    "list": {
+      "noResults": "No teachers found",
+      "loading": "Loading teachers..."
+    },
+    "selected": {
+      "title": "Selected teachers",
+      "empty": "No teacher selected",
+      "remove": "Remove"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "teachers": {
+    "title": "Professeurs disponibles",
+    "subtitle": "Choisissez le meilleur professeur selon vos besoins",
+    "filters": {
+      "searchPlaceholder": "Rechercher un professeur...",
+      "subjectLabel": "Matière",
+      "priceRange": "Fourchette de prix",
+      "rating": "Note minimale"
+    },
+    "card": {
+      "price": "Prix par heure",
+      "rating": "Note",
+      "subjects": "Matières",
+      "select": "Sélectionner ce professeur",
+      "viewProfile": "Voir le profil"
+    },
+    "list": {
+      "noResults": "Aucun professeur trouvé",
+      "loading": "Chargement des professeurs..."
+    },
+    "selected": {
+      "title": "Professeurs sélectionnés",
+      "empty": "Aucun professeur sélectionné",
+      "remove": "Supprimer"
+    }
+  }
+}
