@@ -7,9 +7,9 @@ import {
   StyledSectionTitleContainer,
   StyledSectionTitleUnderLine,
 } from "@atoms/SectionTitle/SectionTitle.style";
-import type { IStyledTeacherProps } from "@templates/teachers/types";
+import type { IStyledTeacherProps } from "@templates/Teachers/types";
 
-export const StylesCategoriesSection = styled(Section)<IStyledTeacherProps>`
+export const StylesTeachersSection = styled(Section)<IStyledTeacherProps>`
   margin-top: ${getSpacing(17)};
   padding-bottom: ${getSpacing(60)};
   ${down("sm")} {
@@ -34,6 +34,6 @@ export const StylesCategoriesSection = styled(Section)<IStyledTeacherProps>`
     display: none;
   }
 `;
-export const StyledCategoriesWrapper = styled(FlexWrapper)`
+export const StyledTeachersWrapper = styled(FlexWrapper)`
   width: 100%;
 `;

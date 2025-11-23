@@ -2,18 +2,21 @@
 
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import type { FC } from "react";
+import { useEffect, useState, type FC } from "react";
 import { useIntl } from "react-intl";
 import {
-  StyledCategoriesWrapper,
-  StylesCategoriesSection,
-} from "@templates/teachers/Teachers.style";
-import type { ITeachersProps } from "@templates/teachers/types";
+  StyledTeachersWrapper,
+  StylesTeachersSection,
+} from "@templates/Teachers/Teachers.style";
 import TeachersListing from "@organisms/TeacherListing/TeacherListing";
+import { getTeachers } from "@services/teachers/services";
+import type { ITeacher } from "@services/teachers/types";
 
-const Teachers: FC<ITeachersProps> = ({ teachers }) => {
+const Teachers: FC = ({}) => {
+  const [teachers, setTeachers] = useState<ITeacher[]>([]);
+
   const intl = useIntl();
-  const categoryCount = teachers.length;
+  const teacherCount = teachers.length;
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const sizing = {
@@ -22,20 +25,29 @@ const Teachers: FC<ITeachersProps> = ({ teachers }) => {
     md: 3,
     lg: 2.4,
   };
+
+  useEffect(() => {
+    const fetchTeachers = async () => {
+      const data = await getTeachers();
+      setTeachers(data);
+    };
+    fetchTeachers().catch(Error);
+  }, []);
+
   return (
-    <StylesCategoriesSection
+    <StylesTeachersSection
       title={intl.formatMessage({ id: "teachers.title" })}
-      teacherCount={categoryCount}
+      teacherCount={teacherCount}
     >
-      <StyledCategoriesWrapper $justify="flex-start">
+      <StyledTeachersWrapper $justify="flex-start">
         <TeachersListing
           teachers={teachers}
           sizing={sizing}
           columnSpacing={isMobile ? 2 : 1.625}
           rowSpacing={isMobile ? 2 : 1.625}
         />
-      </StyledCategoriesWrapper>
-    </StylesCategoriesSection>
+      </StyledTeachersWrapper>
+    </StylesTeachersSection>
   );
 };
 

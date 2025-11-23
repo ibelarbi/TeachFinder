@@ -8,14 +8,14 @@ import {
 } from "@utils/stylesheet";
 import type { IStyledteacherBoxContainerProps } from "@molecules/TeacherBox/types";
 
-export const StyledCategoryBoxWrapper = styled.div`
+export const StyledTeacherBoxWrapper = styled.div`
   position: relative;
   height: 100%;
   cursor: pointer;
   border-radius: ${getSpacing(2)};
   background: ${colorPalette.white};
 `;
-export const StyledCategoryBoxContainer = styled(
+export const StyledTeacherBoxContainer = styled(
   FlexWrapper
 )<IStyledteacherBoxContainerProps>`
   padding-top: 100%;
@@ -24,7 +24,7 @@ export const StyledCategoryBoxContainer = styled(
   border: 1px solid ${colorPalette.linkWater} !important;
 `;
 
-export const StyledCategoryBoxTitle = styled.div`
+export const StyledTeacherBoxTitle = styled.div`
   line-height: 19px;
   font-family: ${fontFamily.AvenirNextMedium};
   font-size: ${fontSize.medium};
@@ -38,7 +38,7 @@ export const StyledCategoryBoxTitle = styled.div`
   padding-top: ${getSpacing(6)};
 `;
 
-export const StyledCategoryBoxName = styled.div`
+export const StyledTeacherBoxName = styled.div`
   text-overflow: ellipsis;
   overflow: hidden;
   line-height: 1.2;
