@@ -1,6 +1,9 @@
 import type { FC } from "react";
 import Grid from "@mui/material/Grid";
-import type { ITeachersListingProps } from "@organisms/TeacherListing/types";
+import type {
+  ISizing,
+  ITeachersListingProps,
+} from "@organisms/TeacherListing/types";
 import TeacherBox from "@molecules/TeacherBox/TeacherBox";
 
 const TeachersListing: FC<ITeachersListingProps> = ({
@@ -19,8 +22,7 @@ const TeachersListing: FC<ITeachersListingProps> = ({
       {...gridProps}
     >
       {teachers.map((teacher) => (
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        <Grid key={teacher.id} item {...(sizing as any)}>
+        <Grid key={teacher.id} item component="div" {...(sizing as ISizing)}>
           <TeacherBox teacher={teacher} />
         </Grid>
       ))}

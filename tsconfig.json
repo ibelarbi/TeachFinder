@@ -28,9 +28,7 @@
       "@atoms/*": [
         "components/atoms/*"
       ],
-      "@assets/*": [
-        "assets/*"
-      ],
+      "@assets/*": ["src/assets/*"],
       "@config/*": [
         "config/*"
       ],
@@ -66,7 +64,8 @@
       ],
       "react": [
         "./node_modules/@types/react"
-      ]
+      ],
+      "@src/*": ["src/*"]
     }
   },
   "include": [

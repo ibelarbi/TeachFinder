@@ -24,5 +24,8 @@
       "empty": "Aucun professeur sélectionné",
       "remove": "Supprimer"
     }
+  },
+  "home": {
+    "account": ""
   }
 }

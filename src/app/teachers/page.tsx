@@ -1,16 +1,17 @@
-import Teachers from "@templates/teachers/Teachers";
-import { getTeachers } from "@services/teachers/services";
+import Teachers from "@templates/Teachers/Teachers";
 import TranslationsProvider from "@providers/TranslationsProvider/TranslationsProvider";
 import { LanguageEnum } from "@utils/types";
+import Layout from "@templates/Layout/Layout";
+import { NextPage } from "next";
 
-export default async function TeachersPage() {
-  const teachers = await getTeachers();
-
+const TeachersPage: NextPage = () => {
   return (
     <TranslationsProvider language={LanguageEnum.EN}>
-      <div>
-        <Teachers teachers={teachers} />
-      </div>
+      <Layout>
+        <Teachers />
+      </Layout>
     </TranslationsProvider>
   );
-}
+};
+
+export default TeachersPage;

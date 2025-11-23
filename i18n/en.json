@@ -1,4 +1,8 @@
 {
+  "home": {
+    "account": "Welcome to TeachFinder",
+    "description": "Find the best tutors for your learning needs."
+  },
   "teachers": {
     "title": "Available Teachers",
     "subtitle": "Choose the best teacher for your needs",
