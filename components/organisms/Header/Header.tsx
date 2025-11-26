@@ -16,6 +16,7 @@ import type { IHeaderProps } from "@organisms/Header/types";
 import { HeaderContainer } from "@molecules/HeaderContainer/HeaderContainer";
 import { Logo } from "@molecules/Logo/Logo";
 import Image from "next/image";
+import { Navbar } from "@molecules/Navbar/Navbar";
 
 export const Header: FC<IHeaderProps> = ({ onClickAccount, searchDiv }) => {
   const theme = useTheme();
@@ -56,7 +57,7 @@ export const Header: FC<IHeaderProps> = ({ onClickAccount, searchDiv }) => {
           </StyledHeaderMenu>
         )}
       </StyledLogoAndIcons>
-      {searchDiv}
+      <Navbar />
     </HeaderContainer>
   );
 };

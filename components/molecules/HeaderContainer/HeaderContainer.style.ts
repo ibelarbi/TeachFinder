@@ -27,4 +27,5 @@ export const StyledHeaderContent = styled(FlexWrapper)`
   ${down("sm")} {
     padding: ${getSpacing(5)} ${getSpacing(8)};
   }
+  gap: ${getSpacing(3)};
 `;
