@@ -13,15 +13,3 @@ export const StyledLayoutContainer = styled(FlexWrapper)`
     padding: 0 ${getSpacing(8)};
   }
 `;
-
-export const StyledLayoutWrapper = styled.div`
-  width: 100%;
-  max-width: ${`${MAX_WIDTH}px`};
-  overflow: hidden;
-  flex: 1;
-  margin-top: ${getSpacing(40)};
-  ${down("sm")} {
-    margin-inline: auto;
-    margin-top: ${getSpacing(30)};
-  }
-`;
